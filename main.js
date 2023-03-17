@@ -13,7 +13,7 @@ function addTask() {
 
     // Create a strike button for the task
     const strikeButton = document.createElement("button");
-    strikeButton.innerHTML = "done!";
+    strikeButton.innerHTML = "✔";
     strikeButton.onclick = function () {
       strikeTask(this);
     };
@@ -21,7 +21,7 @@ function addTask() {
 
     // Create a delete button for the task
     const deleteButton = document.createElement("button");
-    deleteButton.innerHTML = "bye!";
+    deleteButton.innerHTML = "✘";
     deleteButton.onclick = function () {
       deleteTask(this);
     };
