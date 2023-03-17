@@ -47,9 +47,17 @@ h1 {
   font-weight: 700;
   color: #617143;
   text-align: center;
-  margin: 50px;
+  margin-top: 100px;
   font-family: 'Questrial', sans-serif;
   font-family: 'Raleway', sans-serif;
+}
+
+h4 {
+  color: #E7AB9A;
+  font-family: 'Questrial', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 input[type="text"] {
@@ -108,14 +116,20 @@ li:last-child {
   color: #aaa;
 }
 
-.delete {
-  color: #f44336;
-  font-size: 20px;
-  cursor: pointer;
-  transition: color 0.3s ease;
+.footerimg{
+  display: flex;
+  flex-direction: row;
 }
 
-.delete:hover {
-  color: #d33;
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+body {
+  background-image: url("images/strawberry.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0px 300px;
+}
