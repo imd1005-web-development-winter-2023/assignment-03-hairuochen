@@ -1,41 +1,55 @@
-//
-//  JS File
-//  You may remove the code below - it's just boilerplate
-//
 
-//
-// Variables
-//
+// Get the input and ul elements from the DOM
+const taskInput = document.getElementById("taskInput");
+const taskList = document.getElementById("taskList");
 
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
+// Function to add a new task to the list
+function addTask() {
+  if (taskInput.value !== "") {
+    // Create a new li element and text node for the task input value
+    const newTask = document.createElement("li");
+    const taskText = document.createTextNode(taskInput.value);
+    newTask.appendChild(taskText);
 
-// Variables
+    // Create a strike button for the task
+    const strikeButton = document.createElement("button");
+    strikeButton.innerHTML = "done!";
+    strikeButton.onclick = function () {
+      strikeTask(this);
+    };
+    newTask.appendChild(strikeButton);
 
-// DOM Elements
-let appContainer = document.getElementById(appID);
+    // Create a delete button for the task
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "bye!";
+    deleteButton.onclick = function () {
+      deleteTask(this);
+    };
+    newTask.appendChild(deleteButton);
 
-//
-// Functions
-//
 
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
+    // Append the new task li element to the ul list
+    taskList.appendChild(newTask);
+
+    // Clear the input field after adding the task
+    taskInput.value = "";
   }
-
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
 }
+
+// Function to delete a task from the list
+function deleteTask(taskItem) {
+  // Get the parent li element of the delete button, and remove it from the ul list
+  const parentLi = taskItem.parentNode;
+  taskList.removeChild(parentLi);
+}
+
+// Function to strike a task in the list
+function strikeTask(taskItem) {
+  // Get the parent li element of the strike button, and toggle the "done" class on it
+  const parentLi = taskItem.parentNode;
+  parentLi.classList.toggle("done");
+}
+
 
 //
 // Inits & Event Listeners
