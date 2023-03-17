@@ -8,15 +8,9 @@ function addTask() {
     const taskText = document.createTextNode(taskInput.value);
     newTask.appendChild(taskText);
 
-    const strikeButton = document.createElement("button");
-    strikeButton.innerHTML = "✔";
-    strikeButton.onclick = function () {
-      strikeTask(this);
-    };
-    newTask.appendChild(strikeButton);
-
     const deleteButton = document.createElement("button");
-    deleteButton.innerHTML = "✘";
+    deleteButton.innerHTML = "✔";
+    deleteButton.name="delete";
     deleteButton.onclick = function () {
       deleteTask(this);
     };

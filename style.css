@@ -25,6 +25,7 @@
 /*
   PAGE / BODY
 */
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #EDE9D5;
@@ -48,6 +49,7 @@ h1 {
   color: #617143;
   text-align: center;
   margin-top: 100px;
+  margin-bottom:10px;
   font-family: 'Questrial', sans-serif;
   font-family: 'Raleway', sans-serif;
 }
@@ -62,33 +64,52 @@ h4 {
 
 input[type="text"] {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
+  padding-left: 20px;
   font-size: 18px;
   border: none;
-  border-bottom: 2px solid #ddd;
   box-sizing: border-box;
   outline: none;
   border-radius: 20px;
-  color:#E7AB9A;
+  color:#7d655e;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 input[type="text"]:focus {
   border-bottom-color: #617143;
 }
 
+.addButton {
+  display: flex;
+  justify-content: end;
+}
+
+.addButton button {
+  background-color: #617143;
+  font-size: 20px;
+  color:#fff;
+}
+
+.addButton button:hover {
+  background-color: transparent;
+  font-size: 20px;
+  background-color:#9db571;
+  color:#fff
+}
+
 button {
   background-color: #DF7857;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 15px 20px;
+  font-size: 20px;
   cursor: pointer;
-  margin-left: 10px;
-  transition: background-color 0.3s ease;
+  margin-left: 20px;
+  margin-bottom:15px;
   border-radius: 20px;
 }
 
-button:hover {
+button:hover {  
   background-color: #E7AB9A;
 }
 
@@ -100,20 +121,18 @@ ul {
 
 li {
   font-size: 18px;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color:#7d655e;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 li:last-child {
   border-bottom: none;
-}
-
-.done {
-  text-decoration: line-through;
-  color: #aaa;
 }
 
 .footerimg{
@@ -122,7 +141,9 @@ li:last-child {
 }
 
 footer {
+  margin-top: 30px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -132,4 +153,22 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0px 300px;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+h6 {
+  margin-top: 5px;
+  color: #64514b;
+}
+
+h5 {
+  margin-top: 15px;
+  color: #64514b;
 }

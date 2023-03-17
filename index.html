@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Set the page title -->
-    <title>to-do list</title>
+    <title>🍓 strawberry's to-do list 🍓</title>
 
     <!-- Set the charset we're using to UTF-8 -->
     <meta charset="UTF-8" />
@@ -17,11 +17,15 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Set the Favicon  -->
-    <link rel="icon" href="images/favicon/leaf.png" type="image/svg+xml" />
+    <link rel="icon" href="images/favicon/jam.svg" type="image/svg+xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Raleway:wght@900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 
   </head>
   <body>
@@ -32,18 +36,26 @@
     </header>
 
     <section class="container">
-      <input type="text" id="taskInput" placeholder="Add new task">
-      <button onclick="addTask()">✎</button>
+      <div class="input">
+        <input type="text" id="taskInput" placeholder="what again">
+        <div class="addButton">
+          <button onclick="addTask()">✎</button>
+        </div>
+      </div>
+
       <ul id="taskList"></ul>
       <script src="main.js"></script>
     </section>    
       
     <footer>
       <div class="footerimg">
-        <img src="images/header strawberry.png" width="100px">
-        <img src="images/header strawberry.png" width="100px">
-        <img src="images/header strawberry.png" width="100px">
+        <img src="images/header strawberry.png" width="75px">
+        <img src="images/header strawberry.png" width="75px">
+        <img src="images/header strawberry.png" width="75px">
       </div>
+
+      <h5>by hairuo chen</h5>
+      <h6>© 2023</h6>
     </footer>
 
   </body>
