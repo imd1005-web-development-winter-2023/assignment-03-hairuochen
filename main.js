@@ -1,40 +1,35 @@
-//
-//  JS File
-//  You may remove the code below - it's just boilerplate
-//
 
-//
-// Variables
-//
+const taskInput = document.getElementById("taskInput");
+const taskList = document.getElementById("taskList");
+const form = document.querySelector("#addTask");
+form.addEventListener("submit", addTask);
 
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
+function addTask(event) {
+  if (taskInput.value !== "") {
+    console.log("it worked!"); 
+    event.preventDefault();
 
-// Variables
+    const newTask = document.createElement("li");
+    const taskText = document.createTextNode(taskInput.value);
+    newTask.appendChild(taskText);
 
-// DOM Elements
-let appContainer = document.getElementById(appID);
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "✔";
+    deleteButton.name="delete";
+    deleteButton.onclick = function () {
+      deleteTask(this);
+    };
+    newTask.appendChild(deleteButton);
 
-//
-// Functions
-//
+    taskList.appendChild(newTask);
 
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
+    taskInput.value = "";
   }
+}
 
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
+function deleteTask(taskItem) {
+  const parentLi = taskItem.parentNode;
+  taskList.removeChild(parentLi);
 }
 
 //
