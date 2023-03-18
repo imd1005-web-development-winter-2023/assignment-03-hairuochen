@@ -72,7 +72,6 @@ input[type="text"] {
   outline: none;
   border-radius: 20px;
   color:#7d655e;
-  font-family: 'Gloria Hallelujah', cursive;
 }
 
 input[type="text"]:focus {
@@ -115,20 +114,20 @@ button:hover {
 
 ul {
   list-style: none;
-  padding: 0;
+  padding: 20px;
   margin: 0;
+  background-color: #e7ab9ad5;
+  border-radius: 50px;
 }
 
 li {
   font-size: 18px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 15px;
   border-bottom: 2px solid #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color:#7d655e;
-  font-family: 'Gloria Hallelujah', cursive;
 }
 
 li:last-child {

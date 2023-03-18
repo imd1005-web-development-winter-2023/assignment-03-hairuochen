@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Set the page title -->
-    <title>🍓. strawberry's to-do list  🍓</title>
+    <title>🍓 strawberry's to-do list  🍓</title>
 
     <!-- Set the charset we're using to UTF-8 -->
     <meta charset="UTF-8" />
@@ -23,10 +23,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Raleway:wght@900&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-
   </head>
   <body>
 
@@ -36,12 +32,15 @@
     </header>
 
     <section class="container">
-      <div class="input">
-        <input type="text" id="taskInput" placeholder="what again">
-        <div class="addButton">
-          <button onclick="addTask()">✎</button>
+      
+      <form id="addTask">
+        <div class="input">
+          <input type="text" id="taskInput" placeholder="what again">
+          <div class="addButton">
+            <button type="submit">✎</button>
+          </div>
         </div>
-      </div>
+      </form>
 
       <ul id="taskList"></ul>
       <script src="main.js"></script>

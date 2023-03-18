@@ -1,9 +1,14 @@
 
 const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
+const form = document.querySelector("#addTask");
+form.addEventListener("submit", addTask);
 
-function addTask() {
+function addTask(event) {
   if (taskInput.value !== "") {
+    console.log("it worked!"); 
+    event.preventDefault();
+
     const newTask = document.createElement("li");
     const taskText = document.createTextNode(taskInput.value);
     newTask.appendChild(taskText);
@@ -26,12 +31,6 @@ function deleteTask(taskItem) {
   const parentLi = taskItem.parentNode;
   taskList.removeChild(parentLi);
 }
-
-function strikeTask(taskItem) {
-  const parentLi = taskItem.parentNode;
-  parentLi.classList.toggle("done");
-}
-
 
 //
 // Inits & Event Listeners
